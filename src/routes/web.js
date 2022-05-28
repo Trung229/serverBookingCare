@@ -3,8 +3,8 @@ import HomeController from "../controllers/homeController"
 
 let router = express.Router();
 
-let initWebRoutes = (app) =>{
-    router.get('/', HomeController.homeController)
+let initWebRoutes = async (app) =>{
+    router.get('/',await HomeController.homeController)
     return app.use("/", router);
 }
 
